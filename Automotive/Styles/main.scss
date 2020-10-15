@@ -1,0 +1,180 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(/Automotive/Img/Bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+
+    &__header {
+        height: 12vh;
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                scale: 0.56;
+            }
+            h2 {
+                font-size: clamp(1.56rem, calc(5vw + .5rem), 2.5rem);
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+
+        @media (min-width: 1080px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+
+                .list {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    list-style: none;
+
+                    li {
+                        font-size: 1.25rem;
+                    }
+
+                    .btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        height: calc(100vh - 12vh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contenth {
+            text-align: center;
+
+            h1 {
+                color: #00C2FF;
+                font-size: clamp(2.5rem, calc(5vw + 0.625rem), 3.75rem);
+            }
+            h3 {
+                font-size: clamp(1.5rem, calc(3vw + 0.625rem), 2.5rem);
+            }
+           
+        }
+
+        @media (min-width: 1080px) {
+            display: block;
+            position: relative;
+
+            .contenth {
+                position: absolute;
+                top: 41%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.main {
+    background-color: #000000;
+    height: 50vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        text-align: center;
+
+        .main__cards {
+            .card {
+                margin-top: 20px;
+
+                h4 {
+                    color: #00C2FF;
+                    font-size: clamp(23px, calc(5vw + 5px), 30px);
+                }
+                h5 {
+                    font-size: clamp(18px, calc(5vw + 2px), 21px);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1080px) {
+
+        .container {
+            text-align: left;
+            display: flex;
+
+            .main__cards {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .card {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    margin-top: 20px;
+    color: #fff;
+    background-color: #00C2FF;
+    border: none;
+    font-weight: 700;
+    padding: 1em 1em;
+    font-size: 0.9rem;
+    outline: none;
+    border-radius: 0.7em;
+}
+

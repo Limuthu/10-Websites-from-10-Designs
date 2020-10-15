@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.page {
+    background-color: #000000;
+    
+    .header {
+        color: #fff;
+        height: 25vh;
+        position: relative;
+
+        .btn {
+            // position: absolute;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // left: 1.25em;
+            display: none;
+        }
+
+        svg {
+            position: absolute;
+            top: 20%;
+            transform: translate(-50%, -50%);
+            left: 45%;
+            scale: 0.6;
+        }
+
+        h1 {
+            width: fit-content;
+            position: absolute;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+
+        .btn2 {
+            // position: absolute;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // right: 1.25em;
+            display: none;
+        }
+
+        .line {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #fff;
+        }
+
+        @media (min-width: 35.625em) {
+
+            .btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 1.25em;
+                display: block;
+            }
+
+            .btn2 {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 1.25em;
+                display: block;
+            }
+
+            svg {
+                position: absolute;
+                top: 20%;
+                transform: translate(-50%, -50%);
+                left: calc(50% - 1.2em);
+                scale: 0.8;
+            }
+        }
+
+    }
+
+    .cards {
+        margin-top: 1.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+
+        .container2 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            flex-basis: 10%;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+           
+                  
+            .card {
+                .image {
+                    position: relative;
+                    height: 255px;
+                    width: 380px;
+                
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                h2 {
+                    color: #fff;
+                }
+
+                h2,h3 {
+                    text-align: center;
+                    margin-top: 1.25em;
+                }
+
+                .butt {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 1.25em;
+
+                    .btn {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .card1 {
+
+                h3 {
+                    color: #00D69F;
+                }
+
+            }
+
+            .card2 {
+                margin-top: 1.25em;
+
+                h3 {
+                    color: #E75050;
+                }
+
+            }
+
+            .card3 {
+                margin-top: 1.25em;
+
+                h3 {
+                    color: #D27752;
+                }
+
+            }
+
+
+        }
+
+        @media (min-width: 73.125em) {
+            height: 100vh;
+        }
+    }
+
+}
+
+
+
+
+.btn,
+.btn2 {
+    margin-top: 20px;
+    color: #fff;
+    background-color: #00C2FF;
+    border: none;
+    font-weight: 700;
+    padding: 1em 2em;
+    font-size: 0.9rem;
+    outline: none;
+    border-radius: 0.7em;
+}

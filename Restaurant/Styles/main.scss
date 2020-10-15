@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 65em;
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.page {
+    background-image: url(/Restaurant/Img/BG.png);
+    background-size: cover;
+    background-position: center;
+
+    .header {
+        height: 20vh;
+        padding-top: 1.25em;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+            .header--content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                .heading {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+
+                    svg {
+                        scale: 1;
+                        margin-right: 0.625em;
+                    }
+
+                    h2 {
+                        color: #026e78;
+                        font-size: clamp(2.25rem, calc(4vw + 0.625rem), 3.0625rem);
+                    }
+                }
+
+                h2 {
+                    color: #fff;
+                    font-size: clamp(25px, calc(4vw + 8px), 35px);
+                }
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1023px) {
+            height: 20vh;
+
+            .container {
+
+                .header--content {
+                    flex-direction: row;
+
+                    .heading {
+                        width: fit-content;
+                    }
+                }
+
+                .nav {
+                    display: block;
+                    width: 100%;
+                    height: 13.5em;
+
+                    .items {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        list-style: none;
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 20%;
+                            height: 50px;
+                            font-size: 1.25rem;
+                        }
+
+                        .one {
+                            background-color: #fff;
+                        }
+                        
+                        .two,
+                        .three,
+                        .four {
+                            background-color: #2D99A4;
+                        }
+
+                        .five {
+                            background-color: #0E727B;
+                        }
+                    }
+                }
+
+             
+            }
+
+        }
+
+    }
+
+    .main {
+        height: 80vh;
+        position: relative;
+
+        .main--container {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: fit-content;
+            margin-left: 1.25em;
+
+            .h1-content {
+                width: 100%;
+                height: 100%;
+                background-color: #006a74;
+                color: #fff;
+
+                h1 {
+                    font-size: clamp(1.75rem, calc(4vw + 1rem), 3.25rem);
+                    margin: 0 1.25em;
+                    font-weight: 200;
+                }
+            }
+
+            .h2-content {
+                text-align: center;
+                margin: 1.15em 0;
+                width: 80%;
+                height: 100%;
+                color: #006a74;
+                background-color: #fff;
+
+                h1 {
+                    font-size: clamp(1.875rem, calc(4vw + 1rem), 2.5rem);
+                    margin: 0 1.15em;
+                    font-weight: 200;
+                }
+            }
+
+            .h3-content {
+                width: 85%;
+                text-align: center;
+                height: 100%;
+                background-color: #006a74;
+                color: #fff;
+
+                h1 {
+                    font-size: clamp(1.25rem, calc(4vw + 1rem), 2.5rem);
+                    margin: 0 1.15em;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+}
